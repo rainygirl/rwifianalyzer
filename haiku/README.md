@@ -1,11 +1,11 @@
-# R WiFi Analyzer - Haiku
+# R WiFi Analyzer - Haiku OS
 
 *[한국어 버전](README.ko.md)*
 
-*The Haiku port. See the [repository README](../README.md) for the
+*The Haiku OS port. See the [repository README](../README.md) for the
 [Windows Phone](../winphone) and [macOS](../mac) ports.*
 
-Wi-Fi channel and signal strength graph for Haiku. Every access point in range is
+Wi-Fi channel and signal strength graph for Haiku OS. Every access point in range is
 drawn as a curve over the channel it occupies, with its height set by signal
 strength in dBm.
 
@@ -18,7 +18,7 @@ strength in dBm.
 
 ## Building it
 
-Haiku R1/beta4 or newer. The development package is part of a standard install;
+Haiku OS R1/beta4 or newer. The development package is part of a standard install;
 nothing else is needed.
 
 ```

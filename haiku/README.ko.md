@@ -1,11 +1,11 @@
-# R WiFi Analyzer - Haiku
+# R WiFi Analyzer - Haiku OS
 
 *[English version](README.md)*
 
-*Haiku 포트입니다. [Windows Phone](../winphone)과 [macOS](../mac) 포트는
+*Haiku OS 포트입니다. [Windows Phone](../winphone)과 [macOS](../mac) 포트는
 [저장소 README](../README.ko.md)를 보세요.*
 
-Haiku용 Wi-Fi 채널/신호 세기 그래프입니다. 주변의 모든 AP를 자기가 쓰는 채널 위에 곡선으로
+Haiku OS용 Wi-Fi 채널/신호 세기 그래프입니다. 주변의 모든 AP를 자기가 쓰는 채널 위에 곡선으로
 그리고, 높이는 dBm 신호 세기입니다.
 
 - 2.4GHz와 5GHz. 그래프 위의 라디오 버튼에서 전환
@@ -17,7 +17,7 @@ Haiku용 Wi-Fi 채널/신호 세기 그래프입니다. 주변의 모든 AP를 �
 
 ## 빌드하기
 
-Haiku R1/beta4 이상. 개발 패키지는 기본 설치에 포함되어 있고, 그 외에 필요한 것은
+Haiku OS R1/beta4 이상. 개발 패키지는 기본 설치에 포함되어 있고, 그 외에 필요한 것은
 없습니다.
 
 ```
