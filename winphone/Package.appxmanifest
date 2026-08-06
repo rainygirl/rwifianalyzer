@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+  <Identity Name="WifiAnalyzer"
+            Publisher="CN=WifiAnalyzer"
+            Version="1.1.0.0" />
+
+  <!-- Required for Windows 10 Mobile deployment; the GUID must stay stable
+       across builds or the phone treats each install as a different app. -->
+  <mp:PhoneIdentity PhoneProductId="b3d81f2e-5c47-4a90-9e16-2f7c8a41d035"
+                    PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>R WiFi Analyzer</DisplayName>
+    <PublisherDisplayName>R WiFi Analyzer</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <!-- 10586 = Windows 10 Mobile 1511. MSBuild rewrites MinVersion from
+         TargetPlatformMinVersion in the .csproj, so that file is the one to edit -
+         this value is kept in sync only so the manifest reads correctly on its own. -->
+    <TargetDeviceFamily Name="Windows.Universal"
+                        MinVersion="10.0.10586.0"
+                        MaxVersionTested="10.0.15063.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+                 Executable="$targetnametoken$.exe"
+                 EntryPoint="WifiAnalyzer.App">
+      <uap:VisualElements
+        DisplayName="R WiFi Analyzer"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png"
+        Description="Wi-Fi channel and signal strength graph"
+        BackgroundColor="black">
+        <uap:DefaultTile Square71x71Logo="Assets\Square71x71Logo.png"/>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="black" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <!-- wiFiControl is what makes WiFiAdapter.RequestAccessAsync return Allowed and
+         WiFiAdapter.FindAllAdaptersAsync return anything. Without it the app builds,
+         installs and runs, and simply finds no adapter.
+
+         No internetClient: this app only reads beacons, it never opens a socket. -->
+    <DeviceCapability Name="wiFiControl" />
+  </Capabilities>
+</Package>

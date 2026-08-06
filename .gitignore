@@ -1,0 +1,24 @@
+# Visual Studio / MSBuild output
+[Bb]in/
+[Oo]bj/
+AppPackages/
+BundleArtifacts/
+*.user
+*.suo
+.vs/
+
+# Signing material - never commit a test certificate's private key
+*.pfx
+
+# SwiftPM and the bundle the mac Makefile assembles
+mac/.build/
+mac/WifiAnalyzer.app/
+
+# Haiku makefile-engine output
+haiku/objects.*/
+
+.DS_Store
+__pycache__/
+
+# Signed sideload package is kept in winphone/dist deliberately (see README), but
+# the build's own output directory is not.

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>R WiFi Analyzer</string>
+	<key>CFBundleDisplayName</key>
+	<string>R WiFi Analyzer</string>
+	<key>CFBundleExecutable</key>
+	<string>WifiAnalyzer</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleIdentifier</key>
+	<string>io.github.rainygirl.wifianalyzer</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.0</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<!-- CoreWLAN withholds every SSID and BSSID from an app that is not authorized
+	     for location. The app never reads a location; the authorization is the
+	     point. -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>macOS only reveals Wi-Fi network names to apps that are allowed to use location. R WiFi Analyzer never reads or stores your location.</string>
+</dict>
+</plist>
