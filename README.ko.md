@@ -1,3 +1,5 @@
+<img src="icon.png" width="64" align="left" alt="">
+
 # R WiFi Analyzer
 
 *[English version](README.md)*
@@ -55,7 +57,8 @@ Wi-Fi 스캔이 무엇까지 알려주는지는 OS가 정합니다. 세 포트�
 세 포트가 같은 Wi-Fi 글리프, 같은 초록색을 씁니다. UWP 타일은 그려진 상태로 커밋되어
 있고, `.icns`와 Haiku 비트맵 아이콘은 같은 도형에서
 [`mac/tools/make-icon.py`](mac/tools/make-icon.py)와
-[`haiku/tools/make-icon.py`](haiku/tools/make-icon.py)로 생성합니다.
+[`haiku/tools/make-icon.py`](haiku/tools/make-icon.py)로 생성합니다. 루트의
+`icon.png`도 같은 그림이고, README에 쓰입니다.
 
 ## 라이선스
 

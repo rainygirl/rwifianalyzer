@@ -1,3 +1,5 @@
+<img src="../icon.png" width="64" align="left" alt="">
+
 # R WiFi Analyzer - macOS
 
 *[English version](README.md)*

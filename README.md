@@ -1,3 +1,5 @@
+<img src="icon.png" width="64" align="left" alt="">
+
 # R WiFi Analyzer
 
 *[한국어 버전](README.ko.md)*
@@ -57,7 +59,8 @@ difference between them.
 All three ports use the same Wi-Fi glyph, in the same green. The UWP tiles are
 committed as drawn; the `.icns` and the Haiku bitmap icons are generated from the
 same geometry by [`mac/tools/make-icon.py`](mac/tools/make-icon.py) and
-[`haiku/tools/make-icon.py`](haiku/tools/make-icon.py).
+[`haiku/tools/make-icon.py`](haiku/tools/make-icon.py). `icon.png` at the root is
+the same drawing, for the READMEs.
 
 ## License
 
