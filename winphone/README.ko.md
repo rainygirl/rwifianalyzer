@@ -4,7 +4,7 @@
 
 *[English version](README.md)*
 
-*Windows Phone 포트입니다. [macOS](../mac)와 [Haiku](../haiku) 포트는
+*Windows Phone 포트입니다. [macOS](../mac)와 [RenkuOS](../renkuos) 포트는
 [저장소 README](../README.ko.md)를 보세요.*
 
 Windows 10 Mobile(Windows Phone 10)용 Wi-Fi 채널/신호 세기 그래프입니다. 주변의 모든
@@ -116,7 +116,7 @@ $msbuild = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2017\BuildTools\MSB
 
 ## 지원하지 않는 것
 
-- **채널 폭은 알 수 없습니다.** 이 OS의 Wi-Fi API가 알려주지 않고, macOS/Haiku 포트가 폭을
+- **채널 폭은 알 수 없습니다.** 이 OS의 Wi-Fi API가 알려주지 않고, macOS/RenkuOS 포트가 폭을
   읽어내는 비콘 데이터에도 접근할 수 없어서, 40MHz나 80MHz 네트워크도 22MHz 폭으로
   그려집니다.
 - **숨겨진 네트워크**는 `(hidden)`으로 표시됩니다. 비콘에 이름이 없습니다.

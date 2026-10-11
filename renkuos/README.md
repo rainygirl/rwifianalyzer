@@ -1,13 +1,13 @@
 <img src="../icon.png" width="64" align="left" alt="">
 
-# R WiFi Analyzer - Haiku OS
+# R WiFi Analyzer - RenkuOS
 
 *[한국어 버전](README.ko.md)*
 
-*The Haiku OS port. See the [repository README](../README.md) for the
+*The RenkuOS port. See the [repository README](../README.md) for the
 [Windows Phone](../winphone) and [macOS](../mac) ports.*
 
-Wi-Fi channel and signal strength graph for Haiku OS. Every access point in range is
+Wi-Fi channel and signal strength graph for RenkuOS. Every access point in range is
 drawn as a curve over the channel it occupies, with its height set by signal
 strength in dBm.
 
@@ -16,15 +16,15 @@ strength in dBm.
 - Each network keeps the same colour between scans
 - 40 MHz networks are drawn 42 MHz wide, over the spectrum they really occupy
 
-![The 2.4 GHz graph on Haiku; a real scan with the network names replaced](docs/screenshot.png)
+![The 2.4 GHz graph on RenkuOS; a real scan with the network names replaced](docs/screenshot.png)
 
 ## Building it
 
-Haiku OS R1/beta4 or newer. The development package is part of a standard install;
+A current RenkuOS release. The development package is part of a standard install;
 nothing else is needed.
 
 ```
-cd haiku
+cd renkuos
 make
 make run
 ```
@@ -36,7 +36,7 @@ make run
 The binary lands in `objects.<arch>-...-release/RWiFiAnalyzer` and `make run` just
 launches it from there. It has no data files, so copying it anywhere works -
 `~/config/non-packaged/apps/` is the usual home for a locally built app. **Copy it
-there as `R WiFi Analyzer`** - on Haiku the file name is the name Tracker, Deskbar
+there as `R WiFi Analyzer`** - on RenkuOS the file name is the name Tracker, Deskbar
 and the Desktop show, and the build product cannot carry the spaces (makefile-engine
 puts `$(NAME)` straight into shell commands). A symlink in
 `~/config/settings/deskbar/menu/Applications/` puts it in the Deskbar menu, and one
@@ -52,16 +52,16 @@ ln -s "$APPS/R WiFi Analyzer" ~/Desktop/
 
 ## What you need for it to see anything
 
-A wireless interface that Haiku has a driver for. Check that
+A wireless interface that RenkuOS has a driver for. Check that
 **Preferences → Network** lists a Wi-Fi device, or run `ifconfig`. The app names
 the interface it picked in the status line; if it says *"No wireless interface
 found"* there is nothing for it to read.
 
-No permission prompt, no configuration: Haiku lets any app read the scan cache.
+No permission prompt, no configuration: RenkuOS lets any app read the scan cache.
 
 ## What is not supported
 
-- **6 GHz.** No driver Haiku ships supports a Wi-Fi 6E radio, so there would be
+- **6 GHz.** No driver RenkuOS ships supports a Wi-Fi 6E radio, so there would be
   nothing to draw.
 - **Security shows only as encrypted or open.** The scan result carries one
   capability bit; naming WPA2 versus WPA3 would mean parsing the beacon's
@@ -74,7 +74,7 @@ No permission prompt, no configuration: Haiku lets any app read the scan cache.
 - **"No wireless interface found"** - no supported Wi-Fi hardware, or the driver
   did not attach. `listdev` and `ifconfig` will say which.
 - **"Scan result layout mismatch"** - the app reads scan results through a private
-  kernel interface whose layout it has to know in advance, and this Haiku's copy no
+  kernel interface whose layout it has to know in advance, and this RenkuOS's copy no
   longer matches. See [AGENTS.md](AGENTS.md); the fix is a few lines in
   `src/net80211.h`.
 - **The graph stays empty but the interface is named** - the first tick reads the

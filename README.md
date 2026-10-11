@@ -14,7 +14,7 @@ Same app, three ports, one graph:
 |----|--------|------------|---------|
 | Windows 10 Mobile | [`winphone/`](winphone) | C# + XAML (UWP) | [README](winphone/README.md) - a signed package is in [`winphone/dist`](winphone/dist), no build needed |
 | macOS 14 and newer | [`mac/`](mac) | Swift + SwiftUI | [README](mac/README.md) - `cd mac && make` |
-| Haiku | [`haiku/`](haiku) | C++ + the Haiku API | [README](haiku/README.md) - `cd haiku && make` |
+| RenkuOS | [`renkuos/`](renkuos) | C++ + the Haiku API | [README](renkuos/README.md) - `cd renkuos && make` |
 
 Each port stands alone: its own README, its own build, and its own `AGENTS.md`
 covering the traps of that platform. Nothing is shared at build time.
@@ -46,9 +46,9 @@ covering the traps of that platform. Nothing is shared at build time.
 The OS decides what a Wi-Fi scan is allowed to tell you, and that is most of the
 difference between them.
 
-| | Windows 10 Mobile | macOS | Haiku |
+| | Windows 10 Mobile | macOS | RenkuOS |
 |---|---|---|---|
-| Scan API | `Windows.Devices.WiFi` | CoreWLAN | net80211 ioctl ([why](haiku/AGENTS.md)) |
+| Scan API | `Windows.Devices.WiFi` | CoreWLAN | net80211 ioctl ([why](renkuos/AGENTS.md)) |
 | 6 GHz | no radio exists on the hardware | yes | no driver supports it |
 | Channel width | not reported at all - every curve is 22 MHz | from CoreWLAN, placed using the beacon's HT/VHT Operation element | from the same beacon elements |
 | Network names need | the Wi-Fi consent prompt | Location access | nothing |
@@ -57,9 +57,9 @@ difference between them.
 ## The icon
 
 All three ports use the same Wi-Fi glyph, in the same green. The UWP tiles are
-committed as drawn; the `.icns` and the Haiku bitmap icons are generated from the
+committed as drawn; the `.icns` and the RenkuOS bitmap icons are generated from the
 same geometry by [`mac/tools/make-icon.py`](mac/tools/make-icon.py) and
-[`haiku/tools/make-icon.py`](haiku/tools/make-icon.py). `icon.png` at the root is
+[`renkuos/tools/make-icon.py`](renkuos/tools/make-icon.py). `icon.png` at the root is
 the same drawing, for the READMEs.
 
 ## License

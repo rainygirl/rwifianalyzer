@@ -5,7 +5,7 @@
 *[한국어 버전](README.ko.md)*
 
 *The macOS port. See the [repository README](../README.md) for the
-[Windows Phone](../winphone) and [Haiku](../haiku) ports.*
+[Windows Phone](../winphone) and [RenkuOS](../renkuos) ports.*
 
 Wi-Fi channel and signal strength graph for macOS 14 (Sonoma) and newer. Every
 access point in range is drawn as a curve over the channel it occupies, with its

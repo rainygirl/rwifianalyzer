@@ -2,7 +2,7 @@
 
 Engineering notes for changing this code. The README is install-only; everything
 about *why the code looks like this* lives here. The decisions this port shares
-with the [macOS](../mac) and [Haiku](../haiku) ports - the graph geometry, the
+with the [macOS](../mac) and [RenkuOS](../renkuos) ports - the graph geometry, the
 colour hash, what all three do with a refused scan - are in the
 [repository AGENTS.md](../AGENTS.md).
 
@@ -70,7 +70,7 @@ right for 20 MHz channels and understates 40/80 MHz ones.
 
 There is no way around it here. `PhyKind` says `Ht` or `Vht`, which tells you the
 network *could* be wide but not whether it is; nothing on the class exposes the
-beacon's information elements, which is where the macOS and Haiku ports read the
+beacon's information elements, which is where the macOS and RenkuOS ports read the
 HT/VHT Operation element to get both the width and the centre of a wide channel. No
 10586-era API - no later one either - hands a UWP app raw beacon data.
 

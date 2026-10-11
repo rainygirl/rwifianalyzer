@@ -3,9 +3,9 @@
 
     python3 tools/make-icon.py
 
-Needs Pillow (`pip install pillow`), and runs anywhere - not only on Haiku.
+Needs Pillow (`pip install pillow`), and runs anywhere - not only on RenkuOS.
 
-Haiku icons are normally HVIF vector data out of Icon-O-Matic. Nothing can generate
+RenkuOS icons are normally HVIF vector data out of Icon-O-Matic. Nothing can generate
 HVIF from a script, so WifiAnalyzer.rdef imports these 32x32 and 16x16 bitmaps into
 BEOS:L:STD_ICON and BEOS:M:STD_ICON instead, which is what BAppFileInfo falls back
 to when a file has no vector icon. See AGENTS.md.
@@ -84,7 +84,7 @@ def draw_glyph(image, scale, centre_x, dot_y, colour, arcs=3):
 
 
 def icon(size):
-    """Glyph only, edge to edge - Haiku icons carry no background plate."""
+    """Glyph only, edge to edge - RenkuOS icons carry no background plate."""
     big = size * SUPERSAMPLE
     image = Image.new("RGBA", (big, big), (0, 0, 0, 0))
 

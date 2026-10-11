@@ -5,7 +5,7 @@
 *[한국어 버전](README.ko.md)*
 
 *The Windows Phone port. See the [repository README](../README.md) for the
-[macOS](../mac) and [Haiku](../haiku) ports.*
+[macOS](../mac) and [RenkuOS](../renkuos) ports.*
 
 Wi-Fi channel and signal strength graph for Windows 10 Mobile (Windows Phone 10).
 Every access point in range is drawn as a curve over the channel it occupies, with
@@ -121,7 +121,7 @@ If you are changing the code rather than just building it, read
 ## What is not supported
 
 - **Channel width is not detected.** The Wi-Fi API available on this OS does not
-  report it, and gives no access to the beacon data the macOS and Haiku ports read it
+  report it, and gives no access to the beacon data the macOS and RenkuOS ports read it
   from, so 40 and 80 MHz networks are drawn 22 MHz wide like everything else.
 - **Hidden networks** show as `(hidden)` - the beacon carries no name.
 - **6 GHz** - no Windows 10 Mobile device has the radio.

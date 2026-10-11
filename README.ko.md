@@ -14,7 +14,7 @@ Wi-Fi 채널/신호 세기 그래프입니다. 주변의 모든 AP를 자기가 
 |----|------|------|------|
 | Windows 10 Mobile | [`winphone/`](winphone) | C# + XAML (UWP) | [README](winphone/README.ko.md) - 서명된 패키지가 [`winphone/dist`](winphone/dist)에 있어 빌드 없이 설치 가능 |
 | macOS 14 이상 | [`mac/`](mac) | Swift + SwiftUI | [README](mac/README.ko.md) - `cd mac && make` |
-| Haiku | [`haiku/`](haiku) | C++ + Haiku API | [README](haiku/README.ko.md) - `cd haiku && make` |
+| RenkuOS | [`renkuos/`](renkuos) | C++ + Haiku API | [README](renkuos/README.ko.md) - `cd renkuos && make` |
 
 각 포트는 독립적입니다. README, 빌드, 그리고 그 플랫폼의 함정을 정리한 `AGENTS.md`를
 각자 가지고 있습니다. 빌드 시점에 공유하는 것은 없습니다.
@@ -44,9 +44,9 @@ Wi-Fi 채널/신호 세기 그래프입니다. 주변의 모든 AP를 자기가 
 Wi-Fi 스캔이 무엇까지 알려주는지는 OS가 정합니다. 세 포트의 차이는 대부분 거기서
 나옵니다.
 
-| | Windows 10 Mobile | macOS | Haiku |
+| | Windows 10 Mobile | macOS | RenkuOS |
 |---|---|---|---|
-| 스캔 API | `Windows.Devices.WiFi` | CoreWLAN | net80211 ioctl ([이유](haiku/AGENTS.md)) |
+| 스캔 API | `Windows.Devices.WiFi` | CoreWLAN | net80211 ioctl ([이유](renkuos/AGENTS.md)) |
 | 6GHz | 해당 무선을 가진 기기가 없음 | 지원 | 지원하는 드라이버가 없음 |
 | 채널 폭 | 전혀 알려주지 않음 - 모든 곡선이 22MHz | CoreWLAN이 알려주고, 위치는 비콘의 HT/VHT Operation 요소로 결정 | 같은 비콘 요소에서 읽음 |
 | 네트워크 이름을 보려면 | Wi-Fi 사용 동의 | 위치 접근 권한 | 아무것도 필요 없음 |
@@ -55,9 +55,9 @@ Wi-Fi 스캔이 무엇까지 알려주는지는 OS가 정합니다. 세 포트�
 ## 아이콘
 
 세 포트가 같은 Wi-Fi 글리프, 같은 초록색을 씁니다. UWP 타일은 그려진 상태로 커밋되어
-있고, `.icns`와 Haiku 비트맵 아이콘은 같은 도형에서
+있고, `.icns`와 RenkuOS 비트맵 아이콘은 같은 도형에서
 [`mac/tools/make-icon.py`](mac/tools/make-icon.py)와
-[`haiku/tools/make-icon.py`](haiku/tools/make-icon.py)로 생성합니다. 루트의
+[`renkuos/tools/make-icon.py`](renkuos/tools/make-icon.py)로 생성합니다. 루트의
 `icon.png`도 같은 그림이고, README에 쓰입니다.
 
 ## 라이선스

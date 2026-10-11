@@ -14,8 +14,8 @@ BundleArtifacts/
 mac/.build/
 mac/WifiAnalyzer.app/
 
-# Haiku makefile-engine output
-haiku/objects.*/
+# RenkuOS makefile-engine output
+renkuos/objects.*/
 
 .DS_Store
 __pycache__/

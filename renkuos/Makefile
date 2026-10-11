@@ -1,4 +1,4 @@
-## Haiku Makefile, driven by the system's makefile-engine.
+## RenkuOS Makefile, driven by the system's makefile-engine.
 ##
 ##   make          build objects.*/RWiFiAnalyzer
 ##   make run      build and launch it
@@ -7,7 +7,7 @@
 ## Only the knobs the engine documents are set here; it supplies everything else.
 ##
 ## The build product has no space in its name, because makefile-engine puts $(NAME)
-## straight into shell commands. Install it *as* "R WiFi Analyzer": on Haiku the file
+## straight into shell commands. Install it *as* "R WiFi Analyzer": on RenkuOS the file
 ## name is the name Tracker and Deskbar show. See README.md.
 
 NAME := RWiFiAnalyzer

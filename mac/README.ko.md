@@ -4,7 +4,7 @@
 
 *[English version](README.md)*
 
-*macOS 포트입니다. [Windows Phone](../winphone)과 [Haiku](../haiku) 포트는
+*macOS 포트입니다. [Windows Phone](../winphone)과 [RenkuOS](../renkuos) 포트는
 [저장소 README](../README.ko.md)를 보세요.*
 
 macOS 14(Sonoma) 이상용 Wi-Fi 채널/신호 세기 그래프입니다. 주변의 모든 AP를 자기가 쓰는 채널 위에 곡선으로 그립니다. 높이는 dBm 신호 세기입니다.

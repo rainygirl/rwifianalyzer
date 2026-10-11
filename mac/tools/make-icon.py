@@ -7,8 +7,8 @@ Needs Pillow (`pip install pillow`) and macOS's iconutil.
 
 The glyph is the one already in ../winphone/Assets - three arcs and a dot in
 Material green - with the proportions measured off Square150x150Logo.png, so all
-three ports look like the same app. ../haiku/tools/make-icon.py draws the same
-glyph in the format Haiku wants; the geometry constants below are the ones to keep
+three ports look like the same app. ../renkuos/tools/make-icon.py draws the same
+glyph in the format RenkuOS wants; the geometry constants below are the ones to keep
 in step if the glyph ever changes.
 """
 

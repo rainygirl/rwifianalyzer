@@ -5,7 +5,7 @@ them; the per-port `AGENTS.md` covers the platform.
 
 - [`winphone/AGENTS.md`](winphone/AGENTS.md) - UWP, VS2017, sideloading over MTP
 - [`mac/AGENTS.md`](mac/AGENTS.md) - CoreWLAN, Location Services, bundling by Makefile
-- [`haiku/AGENTS.md`](haiku/AGENTS.md) - the private net80211 ioctl, BView drawing
+- [`renkuos/AGENTS.md`](renkuos/AGENTS.md) - the private net80211 ioctl, BView drawing
 
 Written in English to match the source comments.
 
@@ -33,7 +33,7 @@ of one file does not have to look at the other two:
 - **Channel labels are thinned, gridlines are not.** A label is skipped when it
   would collide with the previous one; the gridline still marks the channel.
 - **The same 12 colours**, indexed by an FNV-1a hash of the BSSID. Never the
-  platform's own string hash - .NET, Swift and Haiku all seed theirs per process,
+  platform's own string hash - .NET, Swift and RenkuOS all seed theirs per process,
   which would repaint every network on each launch.
 - **2.4 GHz is what the app opens on**, on all three.
 - **The window title is the app's name; the UI does not repeat it.** The Windows
@@ -58,7 +58,7 @@ constants in the two generators are measured off `Square150x150Logo.png`.
 
 ```
 cd mac   && python3 tools/make-icon.py   # Resources/AppIcon.icns, needs iconutil
-cd haiku && python3 tools/make-icon.py   # icons/*.raw, B_CMAP8, runs anywhere
+cd renkuos && python3 tools/make-icon.py   # icons/*.raw, B_CMAP8, runs anywhere
 ```
 
 Both need Pillow. They duplicate the ~30 lines that draw the glyph rather than
