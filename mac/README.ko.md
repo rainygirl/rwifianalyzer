@@ -5,7 +5,7 @@
 *[English version](README.md)*
 
 *macOS 포트입니다. [Windows Phone](../winphone)과 [RenkuOS](../renkuos) 포트는
-[저장소 README](../README.ko.md)를 보세요.*
+[저장소 README](../README.ko.md)를 보십시오.*
 
 macOS 14(Sonoma) 이상용 Wi-Fi 채널/신호 세기 그래프입니다. 주변의 모든 AP를 자기가 쓰는 채널 위에 곡선으로 그립니다. 높이는 dBm 신호 세기입니다.
 
@@ -35,7 +35,7 @@ open "./R WiFi Analyzer.app"
 macOS에서는 네트워크 이름을 여는데에 위치 권한이 필요하기 때문입니다. 그 외의 용도는 없습니다.
 
 macOS는 Wi-Fi 네트워크의 식별자를 위치 정보로 취급합니다(BSSID는 지도에서 조회할 수
-있으니까요). 그래서 위치 서비스 권한이 없는 앱에게는 CoreWLAN이 `ssid`, `bssid`,
+있기 때문입니다). 그래서 위치 서비스 권한이 없는 앱에게는 CoreWLAN이 `ssid`, `bssid`,
 `countryCode`를 가려버립니다. 채널과 신호 세기를 포함한 나머지는 절대 가리지 않습니다.
 즉 그래프 자체는 어느 쪽이든 정확하고, 권한이 없으면 모든 곡선의 라벨이 `(hidden)`이
 될 뿐입니다.
@@ -46,11 +46,11 @@ macOS는 Wi-Fi 네트워크의 식별자를 위치 정보로 취급합니다(BSS
 전송하지도 않습니다. 거부해도 이름만 안 보일 뿐 앱은 그대로 동작합니다.
 
 프롬프트를 닫아버렸는데 이름을 보고 싶다면 **시스템 설정 → 개인정보 보호 및 보안 →
-위치 서비스 → R WiFi Analyzer**에서 켜세요.
+위치 서비스 → R WiFi Analyzer**에서 켜십시오.
 
 `make`는 번들을 ad-hoc으로 서명합니다. 즉 빌드마다 앱의 신원이 바뀌고 macOS는 매번 새 앱
 으로 취급하므로, 권한을 다시 묻고 위치 서비스 목록에 항목이 쌓입니다. 권한을 유지하려면
-실제 인증서로 서명하세요:
+실제 인증서로 서명하십시오:
 
 ```
 make SIGN="Developer ID Application: Your Name (TEAMID)"
@@ -68,14 +68,14 @@ make SIGN="Developer ID Application: Your Name (TEAMID)"
 ## 그래프가 비어 있으면
 
 - **"No Wi-Fi interface found"** - Wi-Fi가 꺼져 있거나 이 Mac에 Wi-Fi가 없습니다.
-- **모든 라벨이 `(hidden)`** - 위 위치 권한 항목을 보세요. 그래프 자체는 정확합니다.
+- **모든 라벨이 `(hidden)`** - 위 위치 권한 항목을 보십시오. 그래프 자체는 정확합니다.
 - **"Scan refused"** - 정상이고 무해합니다. 드라이버가 스캔 빈도를 제한하면 앱은 직전
   캐시를 씁니다. 다음 주기에 저절로 사라집니다.
 
 스캔하는 동안 무선이 잠깐 채널을 벗어나므로, 5초마다 스캔하면 대역폭을 몇 퍼센트 정도
-씁니다. 측정이 끝나면 창을 닫으세요.
+씁니다. 측정이 끝나면 창을 닫으십시오.
 
-빌드만 하는 게 아니라 코드를 수정하실 거라면 [AGENTS.md](AGENTS.md)를 먼저 읽어보세요.
+빌드만 하는 게 아니라 코드를 수정하실 거라면 [AGENTS.md](AGENTS.md)를 먼저 읽어 보십시오.
 
 ## 라이선스
 

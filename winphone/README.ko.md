@@ -5,7 +5,7 @@
 *[English version](README.md)*
 
 *Windows Phone 포트입니다. [macOS](../mac)와 [RenkuOS](../renkuos) 포트는
-[저장소 README](../README.ko.md)를 보세요.*
+[저장소 README](../README.ko.md)를 보십시오.*
 
 Windows 10 Mobile(Windows Phone 10)용 Wi-Fi 채널/신호 세기 그래프입니다. 주변의 모든
 AP를 자기가 쓰는 채널 위에 곡선으로 그리고, 높이는 dBm 신호 세기입니다. 어느 채널이
@@ -37,7 +37,7 @@ AP를 자기가 쓰는 채널 위에 곡선으로 그리고, 높이는 dBm 신�
 4. **`WifiAnalyzer_1.1.0.0_ARM.appx`** (420KB짜리)를 탭하면 설치되고, 앱 목록에
    **R WiFi Analyzer** 로 나타납니다.
 5. 프레임워크가 없다는 오류가 나오면 `Dependencies` 패키지 3개를 먼저 탭한 뒤 4번을
-   다시 하세요. 대부분의 폰에는 이미 들어있습니다.
+   다시 하십시오. 대부분의 폰에는 이미 들어있습니다.
 
 3번은 건너뛸 수 없습니다. 인증서 없이는 앱 설치가 실패합니다.
 
@@ -51,7 +51,7 @@ tools\copy-to-phone.ps1`을 실행하면 두 파일을 복사하고 도착까지
 ### 설치를 눌러도 아무 일도 일어나지 않으면
 
 패키지가 요구하는 OS 버전이 폰보다 높을 때 폰이 그렇게 반응합니다(오류 메시지도
-나오지 않습니다). **설정 → 정보 → 자세한 정보**에서 빌드 번호를 확인하세요.
+나오지 않습니다). **설정 → 정보 → 자세한 정보**에서 빌드 번호를 확인하십시오.
 
 ### 동작하지 않는 도구들
 
@@ -74,7 +74,7 @@ curl -L -o vs_buildtools.exe https://aka.ms/vs/15/release/vs_buildtools.exe
     --add Microsoft.VisualStudio.Workload.UniversalBuildTools --includeRecommended
 ```
 
-`--log`은 넣지 마세요. 부트스트래퍼가 스스로를 최신 설치 엔진으로 업데이트하는데, 그
+`--log`은 넣지 마십시오. 부트스트래퍼가 스스로를 최신 설치 엔진으로 업데이트하는데, 그
 엔진이 이 옵션을 거부하고 아무 일도 하지 않은 채 코드 87로 종료합니다.
 
 **2. 서명 인증서를 만듭니다.** 주체(subject)가 매니페스트의 `Publisher`와 정확히 같아야
@@ -88,7 +88,7 @@ $cert = New-SelfSignedCertificate -Type Custom -Subject "CN=WifiAnalyzer" `
 $cert.Thumbprint
 ```
 
-**3. 빌드하고 패키징합니다.** `.pfx` 파일이 아니라 **지문(thumbprint)** 으로 서명하세요.
+**3. 빌드하고 패키징합니다.** `.pfx` 파일이 아니라 **지문(thumbprint)** 으로 서명하십시오.
 MSBuild의 키 파일 가져오기는 비밀번호가 맞아도 `APPX0105`로 실패합니다.
 
 ```powershell
@@ -98,12 +98,12 @@ $msbuild = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2017\BuildTools\MSB
     /p:PackageCertificateThumbprint=$($cert.Thumbprint)
 ```
 
-`ARM`을 쓰세요. Windows 10 Mobile 기기는 모두 32비트 ARM이고, `x86`은 폰 에뮬레이터용
+`ARM`을 쓰십시오. Windows 10 Mobile 기기는 모두 32비트 ARM이고, `x86`은 폰 에뮬레이터용
 빌드입니다.
 
-그다음 위의 "폰에 설치하기"를 따르세요.
+그다음 위의 "폰에 설치하기"를 따르십시오.
 
-빌드만 하는 게 아니라 코드를 수정하실 거라면 [AGENTS.md](AGENTS.md)를 먼저 읽어보세요.
+빌드만 하는 게 아니라 코드를 수정하실 거라면 [AGENTS.md](AGENTS.md)를 먼저 읽어 보십시오.
 
 ## 그래프 읽는 법
 
@@ -112,7 +112,7 @@ $msbuild = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\2017\BuildTools\MSB
 - **세로축** - dBm 신호 세기. 0에 가까울수록 강합니다. -50은 아주 좋고, -70은 쓸 만하고,
   -85 아래는 거의 안 잡힙니다.
 - 2.4GHz에서 서로 겹치지 않는 채널은 **1, 6, 11** 셋뿐입니다. 이 중 아래에 깔린 게 가장
-  적은 채널을 고르세요.
+  적은 채널을 고르십시오.
 
 ## 지원하지 않는 것
 
